@@ -1,0 +1,42 @@
+-rw-rw-r-- 1 vagrant vagrant   35 Aug  9 07:46 README.md
+-rw-rw-r-- 1 vagrant vagrant   50 Aug  7 19:00 special_characters
+
+..:
+total 124
+drwxrwxr-x 3 vagrant vagrant 4096 Aug  9 07:27 ./
+drwxrwxr-x 7 vagrant vagrant 4096 Aug  8 14:57 ../
+-rwxrwxr-x 1 vagrant vagrant   32 Aug  7 14:11 0-hello_world*
+-rwxrwxr-x 1 vagrant vagrant   28 Aug  7 14:12 1-confused_smiley*
+-rwxrwxr-x 1 vagrant vagrant   48 Aug  9 07:27 10-no_more_js*
+-rwxrwxr-x 1 vagrant vagrant   56 Aug  7 23:01 100-empty_casks*
+-rwxrwxr-x 1 vagrant vagrant  107 Aug  7 23:06 101-gifs*
+-rwxrwxr-x 1 vagrant vagrant   38 Aug  7 23:08 102-acrostic*
+-rwxrwxr-x 1 vagrant vagrant  115 Aug  7 23:10 103-the_biggest_fan*
+-rwxrwxr-x 1 vagrant vagrant   50 Aug  7 19:58 11-directories*
+-rwxrwxr-x 1 vagrant vagrant   26 Aug  7 21:34 12-newest_files*
+-rwxrwxr-x 1 vagrant vagrant   28 Aug  7 21:49 13-unique*
+-rwxrwxr-x 1 vagrant vagrant   34 Aug  7 21:55 14-findthatword*
+-rwxrwxr-x 1 vagrant vagrant   41 Aug  7 21:57 15-countthatword*
+-rwxrwxr-x 1 vagrant vagrant   39 Aug  7 22:10 16-whatsnext*
+-rwxrwxr-x 1 vagrant vagrant   36 Aug  7 22:14 17-hidethisword*
+-rwxrwxr-x 1 vagrant vagrant   48 Aug  7 22:26 18-letteronly*
+-rwxrwxr-x 1 vagrant vagrant   28 Aug  7 22:40 19-AZ*
+-rwxrwxr-x 1 vagrant vagrant   28 Aug  7 14:12 2-hellofile*
+-rwxrwxr-x 1 vagrant vagrant   30 Aug  7 22:49 20-hiago*
+-rwxrwxr-x 1 vagrant vagrant   16 Aug  7 22:53 21-reverse*
+-rwxrwxr-x 1 vagrant vagrant   52 Aug  7 22:59 22-users_and_homes*
+-rwxrwxr-x 1 vagrant vagrant   39 Aug  7 14:12 3-twofiles*
+-rwxrwxr-x 1 vagrant vagrant   30 Aug  7 14:12 4-lastlines*
+-rwxrwxr-x 1 vagrant vagrant   30 Aug  7 14:13 5-firstlines*
+-rwxrwxr-x 1 vagrant vagrant   38 Aug  7 14:13 6-third_line*
+-rwxrwxr-x 1 vagrant vagrant   99 Aug  7 15:15 7-file*
+-rwxrwxr-x 1 vagrant vagrant   36 Aug  7 18:30 8-cwd_state*
+-rwxrwxr-x 1 vagrant vagrant   39 Aug  7 18:58 9-duplicate_last_line*
+-rw-rw-r-- 1 vagrant vagrant   67 Aug  9 07:12 README.md
+drwxrwxr-x 3 vagrant vagrant 4096 Aug  9 08:07 rough/
+
+java:
+total 8
+drwxrwxr-x 2 vagrant vagrant 4096 Aug  7 19:50 ./
+drwxrwxr-x 3 vagrant vagrant 4096 Aug  9 08:07 ../
+-rw-rw-r-- 1 vagrant vagrant    0 Aug  7 19:50 jab.js
