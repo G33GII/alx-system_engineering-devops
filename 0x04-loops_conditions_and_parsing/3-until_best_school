@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# script: displays Best School (x)0).
+count=0
+until [ $count -eq 10 ]; do
+echo "Best School"
+((count++))
+done
