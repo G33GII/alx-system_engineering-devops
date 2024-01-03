@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get listening sockets and their associated processes
+listening_sockets=$(ss -tlnp)
+
+# Display only listening sockets and their corresponding PID and program names
+echo "$listening_sockets" | awk 'NR > 1 {
+    split($6, parts, ",")
+    pid = parts[2]
+    sub(/pid=/, "", pid)
+    command = $7
+    sub(/\(([^)]+)\)/, "", command)
+    print "Port:", parts[1], "PID:", pid, "Program:", command
+}'
+
