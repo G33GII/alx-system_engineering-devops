@@ -3,15 +3,4 @@
 #       and pass it to a regular expression matching method
 #    - The regular expression must match "School"
 
-if ARGV.empty?
-  puts "Please provide an argument."
-else
-    arr = []
-    for str in ARGV do
-        if str.match(/Scho.l/)
-            arr << str
-        end
-    end
-    print arr.join()
-    puts
-end
+puts ARGV[0].scan(/School/).join
