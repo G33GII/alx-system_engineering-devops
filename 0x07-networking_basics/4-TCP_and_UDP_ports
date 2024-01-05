@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# Get listening sockets and their associated processes
-# Display only listening sockets and their corresponding PID and program names
-# Displays listening ports. Includes listening sockets as well
-# + as the PID and name of the program to which each socket belongs.
+# Bash scritp that Gets listening sockets and their associated processes
 
 netstat -l --program
