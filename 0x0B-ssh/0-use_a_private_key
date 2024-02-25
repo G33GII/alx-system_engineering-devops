@@ -5,5 +5,3 @@ private_key="~/.ssh/school"
 
 # SSH connection using single-character flags
 ssh -i "$private_key" ubuntu@"$server"
-
-ssh  -i ~/.ssh/school
