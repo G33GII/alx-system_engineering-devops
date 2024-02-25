@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Define variables
 key_name="school"
 key_bits=4096
