@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-# A
+# Apache inside ducker
+
+service apache2 start
