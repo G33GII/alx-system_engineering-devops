@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+# The page must return an HTTP 404 error code
 
 echo -e "Updating and installing Nginx.\n"
 sudo apt-get update -y -qq && \
