@@ -7,7 +7,8 @@ usage() {
 }
 
 # Check if correct number of arguments are passed
-if [ "$#" -lt 4 ]; then
+if [ "$#" -lt 4 ]
+then
     usage
 fi
 
