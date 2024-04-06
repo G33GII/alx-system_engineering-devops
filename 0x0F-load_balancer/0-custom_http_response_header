@@ -11,7 +11,7 @@ sudo apt-get install -y nginx
 header_config="add_header X-Served-By \$HOSTNAME;"
 
 # Update NGINX default site configuration to include the custom header
-sudo sed -i "/$header_config" /etc/nginx/sites-available/default
+sudo sed -i "/server_name _/a $header_config" /etc/nginx/sites-available/default
 
 # Create index.html file with "Hello World!" message
 echo "Hello World!" | sudo tee /var/www/html/index.html
