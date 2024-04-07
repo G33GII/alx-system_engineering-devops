@@ -44,8 +44,3 @@ sudo systemctl enable haproxy
 
 # Restart HAProxy service to apply changes
 sudo systemctl restart haproxy
-
-
-
-
-alias wed1="35.174.200.187"
