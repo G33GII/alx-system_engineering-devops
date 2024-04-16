@@ -10,7 +10,7 @@ sed -i 's/^#\?user\s*[^;]*/user nginx/' nginx.conf
 
 
 # Set Nginx to listen on all active IPs on port 8080
-sed -i 's/listen\s*[^;]*/listen *:8080;/' nginx.conf
+sed -i 's/listen\s*[^;]*/listen *:8080/' nginx.conf
 
 # Restart Nginx
 #service nginx restart
