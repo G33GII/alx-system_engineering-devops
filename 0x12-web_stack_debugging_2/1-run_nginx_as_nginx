@@ -8,7 +8,7 @@ fi
 # Set Nginx user to nginx
 #sed -i 's/user\s*[^;]*/user nginx/' nginx.conf
 
-sed -i 's/^#?user\s*[^;]*/user nginx;/' nginx.conf
+sed -i 's/^#\?user\s*[^;]*/user nginx/' nginx.conf
 
 
 # Set Nginx to listen on all active IPs on port 8080
