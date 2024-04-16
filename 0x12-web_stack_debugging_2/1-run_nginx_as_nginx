@@ -6,13 +6,12 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Set Nginx user to nginx
-sed -i 's/^#\?user\s*[^;]*/user nginx/' nginx.conf
-
+sed -i 's/^#\?user\s*[^;]*/user nginx/' /etc/nginx/nginx.conf
 
 # Set Nginx to listen on all active IPs on port 8080
-sed -i 's/listen\s*[^;]*/listen *:8080/' nginx.conf
+sed -i 's/listen\s*[^;]*/listen *:8080/' /etc/nginx/site-available/default
 
 # Restart Nginx
-#service nginx restart
+service nginx restart
 
-#echo "Nginx configured successfully"
+echo "Nginx configured successfully"
