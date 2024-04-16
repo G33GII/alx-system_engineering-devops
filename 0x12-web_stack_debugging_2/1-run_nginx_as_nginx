@@ -6,8 +6,8 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Set Nginx user to nginx
-sed -i 's/user\s*[^;]*/user root;/' /etc/nginx/nginx.conf
-sed -i 's/^#?user\s*[^;]*/user nginx;/' /etc/nginx/nginx.conf
+sed -i 's/user\s*[^;]*/user root;/' nginx.conf
+
 
 
 # Set Nginx to listen on all active IPs on port 8080
