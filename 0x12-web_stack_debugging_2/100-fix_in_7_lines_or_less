@@ -1,6 +1,5 @@
 #!/bin/bash
 # bash script
-sed -i 's/.*user.*/user nginx;/' /etc/nginx/nginx.conf
-sed -i 's/.*listen.*/listen 8080;/' /etc/nginx/sites-available/default
-sed -i 's/.*listen.*/listen [::]:8080;/g' /etc/nginx/sites-available/default
-nginx -g 'daemon off'
+sed -i '/^user/s/.*/user nginx;/' /etc/nginx/nginx.conf
+sed -i '/^listen/s/.*/listen 8080;/' /etc/nginx/nginx.conf
+nginx -g 'daemon off;'
