@@ -8,7 +8,6 @@ import sys
 
 
 if __name__ == "__main__":
-    # Base URL for the JSONPlaceholder API
     url = "https://jsonplaceholder.typicode.com/"
 
     # Get the employee information using the provided employee ID
