@@ -5,7 +5,7 @@ exec { 'update_nginx_default_ulimit':
 }
 
 # Restart nginx service if the configuration file has been updated
-service { 'nginx-restart':
+exec { 'nginx-restart':
   command => '/etc/init.d/nginx restart',
   path    => '/etc/init.d/',
 }
