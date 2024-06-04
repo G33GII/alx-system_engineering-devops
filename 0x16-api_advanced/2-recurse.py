@@ -8,12 +8,15 @@ import requests
 
 def recurse(subreddit, hot_list=None, after="", count=0):
     """
-    Recursively retrieves a list of titles of all hot posts on a given subreddit.
+    Recursively retrieves a list of titles
+    of all hot posts on a given subreddit.
 
     Args:
         subreddit (str): The name of the subreddit.
-        hot_list (list, optional): List to store the post titles. Default is None.
-        after (str, optional): Token used for pagination. Default is an empty string.
+        hot_list (list, optional): List to store the post titles.
+        Default is None.
+        after (str, optional): Token used for pagination.
+        Default is an empty string.
         count (int, optional): Current count of retrieved posts. Default is 0.
 
     Returns:
@@ -37,7 +40,8 @@ def recurse(subreddit, hot_list=None, after="", count=0):
         "limit": 100
     }
 
-    # Send a GET request to the subreddit's hot posts page with no redirects allowed
+    """Send a GET request to the subreddit's
+    hot posts page with no redirects allowed"""
     response = requests.get(api_url, headers=headers,
                             params=params, allow_redirects=False)
 

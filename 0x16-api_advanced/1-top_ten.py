@@ -26,7 +26,8 @@ def top_ten(subreddit):
         "limit": 10
     }
 
-    # Send a GET request to the subreddit's hot posts page with no redirects allowed
+    """Send a GET request to the subreddit's hot
+    posts page with no redirects allowed"""
     response = requests.get(api_url, headers=headers,
                             params=params, allow_redirects=False)
 
