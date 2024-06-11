@@ -9,49 +9,57 @@ This project focuses on troubleshooting and fixing issues in a web stack. The pr
 - Enhance skills in managing and maintaining a web stack.
 
 ## Requirements
-- Familiarity with web servers (e.g., Apache, Nginx).
-- Understanding of database management systems (e.g., MySQL, PostgreSQL).
-- Basic knowledge of network protocols and tools.
-- Access to a Linux-based system for testing and debugging.
+### General
+- All your files will be interpreted on Ubuntu 14.04 LTS.
+- All your files should end with a new line.
+- A `README.md` file at the root of the folder of the project is mandatory.
+- Your Puppet manifests must pass `puppet-lint` version 2.1.1 without any errors.
+- Your Puppet manifests must run without error.
+- Your Puppet manifests' first line must be a comment explaining what the Puppet manifest is about.
+- Your Puppet manifests files must end with the extension `.pp`.
+- Files will be checked with Puppet v3.4.
 
-## Project Tasks
-### Task 0: Fix a Web Server Issue
-- **Objective:** Identify and resolve an issue causing the web server to fail.
+### Install Puppet-Lint
+```bash
+$ apt-get install -y ruby
+$ gem install puppet-lint -v 2.1.1
+```
+
+## Tasks
+
+### Task 0: Sky is the limit, let's bring that limit higher
+- **Objective:** In this web stack debugging task, we are testing how well our web server setup featuring Nginx is doing under pressure and it turns out it’s not doing well: we are getting a huge amount of failed requests.
+- **Tool:** ApacheBench (ab) is used for benchmarking. 
 - **Steps:**
-  1. Investigate server logs to find error messages.
-  2. Debug configuration files for errors or misconfigurations.
-  3. Apply the necessary fixes and restart the web server.
-  4. Verify that the web server is functioning correctly.
+  1. Benchmark with ApacheBench to simulate 2000 HTTP requests to the server with 100 requests at a time.
+  2. Identify issues causing failed requests.
+  3. Fix the issues to achieve 0 failed requests.
 
-### Task 1: Troubleshoot Application Errors
-- **Objective:** Diagnose and fix issues within the web application.
+#### Example Benchmark
+```bash
+root@0a62aa706eb3:/# ab -c 100 -n 2000 localhost/
+# Initial results showing 943 failed requests
+root@0a62aa706eb3:/# puppet apply 0-the_sky_is_the_limit_not.pp
+# Apply Puppet manifest to fix the issue
+root@0a62aa706eb3:/# ab -c 100 -n 2000 localhost/
+# Final results showing 0 failed requests
+```
+
+### Task 1: User limit
+- **Objective:** Change the OS configuration so that it is possible to login with the holberton user and open a file without any error message.
 - **Steps:**
-  1. Examine application logs for error messages.
-  2. Check application dependencies and configurations.
-  3. Correct any identified issues and redeploy the application.
-  4. Ensure the application is running as expected.
+  1. Fix the "Too many open files" error for the `holberton` user.
+  2. Apply Puppet manifest to resolve the issue.
 
-### Task 2: Resolve Database Connection Problems
-- **Objective:** Address problems related to database connectivity.
-- **Steps:**
-  1. Review database server logs for errors.
-  2. Verify database configuration settings.
-  3. Test database connection from the web application.
-  4. Fix any issues and confirm database connectivity.
-
-### Task 3: Network Troubleshooting
-- **Objective:** Fix network-related issues affecting the web stack.
-- **Steps:**
-  1. Use network diagnostic tools (e.g., ping, traceroute) to identify issues.
-  2. Check firewall and security group settings.
-  3. Resolve any network configuration problems.
-  4. Ensure the network is functioning properly.
-
-## Tools and Commands
-- Log Analysis: `tail`, `grep`, `cat`
-- **Web Server Management:** `systemctl`, `service`
-- **Database Management:** `mysql`, `psql`
-- **Network Diagnostics:** `ping`, `traceroute`, `netstat`
-
+#### Example Fix
+```bash
+root@079b7269ec1b:~# su - holberton
+-su: /etc/profile: Too many open files
+-su: /home/holberton/.bash_profile: Too many open files
+root@079b7269ec1b:~# puppet apply 1-user_limit.pp
+# Apply Puppet manifest to fix the issue
+root@079b7269ec1b:~# su - holberton
+# No errors after applying the fix
+```
 ## Conclusion
 Web stack debugging is a crucial skill for maintaining a robust and reliable web infrastructure. This project provides hands-on experience in identifying and fixing common issues in web servers, applications, databases, and networks. Through these tasks, you will enhance your ability to troubleshoot and ensure the smooth operation of a web stack.
