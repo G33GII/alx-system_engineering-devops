@@ -48,7 +48,7 @@ This project focuses on troubleshooting and fixing issues in a web stack. The pr
   4. Ensure the network is functioning properly.
 
 ## Tools and Commands
-- **Log Analysis:** `tail`, `grep`, `cat`
+- Log Analysis: `tail`, `grep`, `cat`
 - **Web Server Management:** `systemctl`, `service`
 - **Database Management:** `mysql`, `psql`
 - **Network Diagnostics:** `ping`, `traceroute`, `netstat`
