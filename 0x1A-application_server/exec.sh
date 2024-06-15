@@ -44,21 +44,21 @@ server {
         try_files \$uri \$uri/ =404;
     }
 
-    location / {
-        proxy_pass http://0.0.0.0:5003;
-    }
 
-    location /airbnb-onepage {
-        proxy_pass http://0.0.0.0:5000/airbnb-onepage;
-    }
 
 
     location ~ ^/airbnb-dynamic/number_odd_or_even/([0-9]+)$ {
         proxy_pass http://0.0.0.0:5001/number_odd_or_even/\$1;
     }
 
+    location /airbnb-onepage {
+        proxy_pass http://0.0.0.0:5000/airbnb-onepage;
+    }
     location /api/ {
         proxy_pass http://0.0.0.0:5002;
+    }
+    location / {
+        proxy_pass http://0.0.0.0:5003;
     }
 
     if (\$request_filename ~ redirect_me){
