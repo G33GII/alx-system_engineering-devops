@@ -1,22 +1,5 @@
-#!/bin/bash
-# This script sets up the environment and configures the server
-
-# Update and install necessary packages
-sudo apt-get update
-sudo apt-get install -y nginx
-sudo apt-get install -y python3-pip
-pip3 install flask
-pip3 install sqlalchemy
-sudo apt install -y net-tools
-sudo apt install -y gunicorn
-sudo apt install -y tmux
-
-# Remove any previous versions of the repository and clone the new ones
-rm -rf AirBnB_clone_v*
-git clone https://github.com/G33GII/AirBnB_clone_v2.git
-git clone https://github.com/G33GII/AirBnB_clone_v3.git
-git clone https://github.com/G33GII/AirBnB_clone_v4.git
-
+#!/usr/bin/bash
+# Nginx-Config file
 
 NGINX_CONFIG="/etc/nginx/sites-enabled/default"
 
@@ -75,12 +58,3 @@ EOF
 sudo nginx -t
 sudo sytemctl restart nginx
 
-# Start the Flask applications using gunicorn in tmux sessions
-cd /home/ubuntu/AirBnB_clone_v3
-tmux new-session -d 'gunicorn --bind 0.0.0.0:5002 api.v1.app:app'
-
-cd /home/ubuntu/AirBnB_clone_v4
-tmux new-session -d 'gunicorn --bind 0.0.0.0:5003 web_dynamic.app:app'
-
-cd /home/ubuntu/AirBnB_clone_v2
-tmux new-session -d 'gunicorn --bind 0.0.0.0:5000 web_flask.0-hello_route:app'
